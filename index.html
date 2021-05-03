@@ -21,7 +21,7 @@
             <div class="img-container">
                 <img :src="images[1]" alt="">
                 <div class="slider-dot-container">
-                    <a href="#" class="dot" :class="currentImg:activeImg === index" v-for="(img, index) in images"></a>
+                    <a href="#" class="dot" :class="{currentImg: activeImg === index}" v-for="(img, index) in images"></a>
                 </div>
             </div>
             <div class="arrow-r">
