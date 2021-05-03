@@ -26,6 +26,11 @@ se
 
                 this.activeImg = newIndex;
             }
+        },
+        mounted() {
+            const document.querySelector(" .slider-container")
+        
+            elementoHtml.focus()
         }
-    }
+    });
 )
