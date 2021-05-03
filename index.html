@@ -14,14 +14,14 @@
     <main id="vueContainer">
         <h1>{{message}}</h1>
 
-        <div class="slider-container">
+        <div class="slider-container" tabindex="-1" @keyup.left="changeImg(-1)" @keyup.right="changeImg(+1)">
             <div class="arrow-l">
                 <i class="fa fa-arrow-left" aria-hidden="true" @click="changeImg(-1)"></i>
             </div>
             <div class="img-container">
                 <img :src="images[1]" alt="">
                 <div class="slider-dot-container">
-                    <a href="#" class="dot" :class="{currentImg: activeImg === index}" v-for="(img, index) in images"></a>
+                    <a href="#" class="dot" :class="{currentImg: activeImg === index}" v-for="(img, index) in images" :data-index="index" @click="onDotClick(index)"></a>
                 </div>
             </div>
             <div class="arrow-r">

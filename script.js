@@ -2,35 +2,47 @@
 const app = new Vue(
     {
         el: '#vueContainer',
-       data: {
-            message:"test",
+        data: {
+            message: "test",
             var: 0,
-            images:["images/Uno.jpg", "images/due.jpg", "images/tre.jpg", "images/quattro.jpg"]
+            images: ["images/Uno.jpg", "images/due.jpg", "images/tre.jpg", "images/quattro.jpg"]
         },
         methods: {
             /**
              * 
              * @param {number}}direction - +1 se voglio andare avanti, -1 se indeitro direction 
              */
-            changeImg(direction){
+            changeImg(direction, changedByAI) {
                 let newIndex = this.activeImg += direction;
-se 
-                if(newIndex < 0){
+                
+                }
+                if (newIndex < 0) {
                     // se l'indice < di 0 facciamo andare l'utente all'ultima immagine della lista
                     newIndex = this.images.length
-                } else if (newIndex > (this.images.length - 1)){
+                } else if (newIndex > (this.images.length - 1)) {
                     // se l'indice è già l'ultimo della lista delle immagini, facciamo andare l'utente alla prima immagine
                     newIndex = 0;
                     this.activeImg = 0
                 }
 
                 this.activeImg = newIndex;
+            },
+            onDotClick(clickedIndex) {
+                this.activeImg = clickedIndex;
+            },
+            play() {
+                clearInterval(this.interval);
             }
         },
         mounted() {
             const document.querySelector(" .slider-container")
         
-            elementoHtml.focus()
+            elementoHtml.focus();
+
+            setInterval(function()) => {
+                this.changeImg(+1);
+            }, 2000);                
+            })
         }
     });
 )
