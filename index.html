@@ -19,7 +19,7 @@
                 <i class="fa fa-arrow-left" aria-hidden="true" @click="changeImg(-1)"></i>
             </div>
             <div class="img-container">
-                <img :src="images[1]" alt="">
+                <img :src="images[activeImg]" alt="">
                 <div class="slider-dot-container">
                     <a href="#" class="dot" :class="{currentImg: activeImg === index}" v-for="(img, index) in images" :data-index="index" @click="onDotClick(index)"></a>
                 </div>
