@@ -18,7 +18,7 @@ const app = new Vue(
                 
                 if (newIndex < 0) {
                     // se l'indice < di 0 facciamo andare l'utente all'ultima immagine della lista
-                    newIndex = this.images.length
+                    newIndex = this.images.length - 1
                 } else if (newIndex > (this.images.length - 1)) {
                     // se l'indice è già l'ultimo della lista delle immagini, facciamo andare l'utente alla prima immagine
                     newIndex = 0;
